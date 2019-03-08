@@ -4,7 +4,7 @@ It consists of mainly 2 projects, one for backend API (SimpleAir.API) and one fo
 
 ## Getting Started
 
-This solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, Web UI with Angular 6, unit testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database, e2e and unit tests for Web UI and traffic logging.
+This solutions are implemented in order to implement a demonstration project using .NET Core, Angular 6, unit testing and e2e testing. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, Web UI with Angular 6, unit testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database, e2e and unit tests for Web UI and traffic logging.
 
 ## Tech/framework used
 The techs used in the solution as follows;
