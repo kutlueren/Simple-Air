@@ -1,4 +1,4 @@
-#Linkit Assignment Solution
+#Solution
 
 It consists of mainly 2 projects, one for backend API (SimpleAir.API) and one for Web UI (LinkitAir.Web.UI), also unit test project for backend API.
 
