@@ -1,12 +1,12 @@
-#Solution
+# Solution
 
 It consists of mainly 2 projects, one for backend API (SimpleAir.API) and one for Web UI (LinkitAir.Web.UI), also unit test project for backend API.
 
-##Getting Started
+## Getting Started
 
 This solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, Web UI with Angular 6, unit testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database, e2e and unit tests for Web UI and traffic logging.
 
-##Tech/framework used
+## Tech/framework used
 The techs used in the solution as follows;
 
 	1. .Net core 2.2
@@ -27,9 +27,9 @@ The techs used in the solution as follows;
 	16. node js version 10.14.1
 	17. Automapper
 
-##How is it done?
+## How is it done?
 
-###REST API
+### REST API
 
 So the REST API is SimpleAir.API and it is implemented using .net core. Tha design of the system lays essentially like following;
 
@@ -124,7 +124,7 @@ So the REST API is SimpleAir.API and it is implemented using .net core. Tha desi
 
 		Max response time of all requests
 
-###WEB UI
+### WEB UI
 
   **a. SimpleAir.Web.UI:** It is the user interface project. Angular (angular 6) framework has been used to implement the user interface. The app lays in WebApp folder and there is only one page just to demonstrate the implementation. It is not the shiniest page ever but I think it is fair enough to demonstrate the functionality. I didnt bother so much with css and so on.
 
@@ -162,7 +162,7 @@ So the REST API is SimpleAir.API and it is implemented using .net core. Tha desi
   A seperate build has been implemented as well. Just change the path on terminal or command prompt to ~\SimpleAir.Web.UI\WebApp and type "npm install" and when it finishes then type "npm run ci". What it is going to do is install the packages, run the unit tests, run the e2e test, build and then start the app. Type http://localhost:4200/ on your browser then woila! Before that, plase do not forget to run th API.
 
 
-##Credits
+## Credits
 
 	Param Singh 	https://medium.com/paramsingh-66174/automate-e2e-testing-of-angular-4-apps-with-protractorjs-jasmine-fcf1dd9524d5
 					https://angular.io/guide/testing
