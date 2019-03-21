@@ -12,7 +12,7 @@
 ###############################################################################
 #*.cs     diff=csharp
 
-*.ts   linguist-generated=true
+*.ts   linguist-language=TypeScript
 
 ###############################################################################
 # Set the merge driver for project and solution files
