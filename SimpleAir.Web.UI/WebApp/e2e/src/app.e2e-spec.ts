@@ -19,8 +19,6 @@ describe('App', () => {
 
     var rows = tabledata.all(by.tagName("tr"));
 
-
-
     expect(rows.count()).toBeGreaterThan(0);
   });
 });
