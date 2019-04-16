@@ -19,6 +19,11 @@ namespace SimpleAir.Core.Repository
         /// <returns>Flights equals to departure and destination, equal or greater than selected date </returns>
         Task<IEnumerable<Flight>> GetAvailableFligthsAsync(int departure, int destination, DateTime startDate);
 
+        /// <summary>
+        /// Inserts new flight to db
+        /// </summary>
+        /// <param name="flight"></param>
+        /// <returns></returns>
         Task InsertFlightAsync(Flight flight);
     }
 }
