@@ -20,10 +20,6 @@ export class AppPage {
     browser.driver.sleep(500);  
     element.all(by.className('mat-calendar-body-cell')).get(0).click();
 
-    element(by.id('endDateToggle')).element(by.css('mat-datepicker-toggle')).element(by.css('button')).click();
-    browser.driver.sleep(500);
-    element.all(by.className('mat-calendar-body-cell')).last().click();
-
   }
 
 }

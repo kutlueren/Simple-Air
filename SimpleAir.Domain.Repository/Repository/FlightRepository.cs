@@ -27,11 +27,11 @@ namespace SimpleAir.Domain.Repository.Repository
             await _dbContext.Flights.AddAsync(flight);
         }
 
-        public async Task<IEnumerable<Flight>> GetAvailableFligthsAsync(int departure, int destination, DateTime startDate, DateTime endDate)
+        public async Task<IEnumerable<Flight>> GetAvailableFligthsAsync(int departure, int destination, DateTime startDate)
         {
             var flights = await _dbContext.Flights.Include(u => u.Destination).Include(u => u.Departure).Where(t => t.Destination.Id == destination 
             && t.Departure.Id == departure
-            && t.Flightdate>=startDate && t.Flightdate<=endDate).ToListAsync();
+            && t.Flightdate>=startDate).ToListAsync();
 
             return flights;
         }

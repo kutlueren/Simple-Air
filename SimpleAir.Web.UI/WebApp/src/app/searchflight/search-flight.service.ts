@@ -17,7 +17,6 @@ export class SearchFlightService extends SearchFlightServiceAbstract{
   getAirPorts<T>(model: any): Observable<T> {
 
     let head = new HttpHeaders({ 'Content-Type': 'application/json' });
-    //let option = new RequestOptions({ headers: head });
 
     return this.http.post<T>(this.apiUrl + '/GetAirports', JSON.stringify(model), { headers: head });
   }
@@ -25,7 +24,6 @@ export class SearchFlightService extends SearchFlightServiceAbstract{
   getFlights<T>(model: any): Observable<T> {
 
     let head = new HttpHeaders({ 'Content-Type': 'application/json' });
-    //let option = new RequestOptions({ headers: head });
 
     return this.http.post<T>(this.apiUrl + '/GetFlights', JSON.stringify(model), { headers: head });
   }

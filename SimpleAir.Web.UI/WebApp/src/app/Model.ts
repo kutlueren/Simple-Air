@@ -6,7 +6,6 @@ export class FlightRequestDto {
   DepartureId: number;
   DestinationId: number;
   StartDate: Date;
-  EndDate: Date;
 }
 
 export interface Airport {

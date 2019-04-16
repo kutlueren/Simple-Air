@@ -9,7 +9,7 @@
     "e2e": "ng e2e",
     "start": "ng serve",
     "lint": "ng lint",
-    "ci": "npm run test && npm run e2e && npm run build && npm run start"
+    "ci": "npm run build && npm run test && npm run e2e && npm run start"
   },
   "private": true,
   "dependencies": {

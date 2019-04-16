@@ -1,14 +1,17 @@
-﻿using SimpleAir.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SimpleAir.Core;
 using SimpleAir.Core.Repository;
 using SimpleAir.Domain.Repository.Context;
 using SimpleAir.Domain.Repository.Repository;
 using SimpleAir.Domain.Service.Interface;
 using SimpleAir.Domain.Service.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace SimpleAir.Bootstrapper
 {
+    /// <summary>
+    /// IOC injection manager
+    /// </summary>
     public class BootStrapper
     {
         public void Register(IServiceCollection services)

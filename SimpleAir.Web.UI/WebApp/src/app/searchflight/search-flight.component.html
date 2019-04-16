@@ -53,13 +53,6 @@
               <mat-datepicker #startDatepicker></mat-datepicker>
             </mat-form-field>
           </div>
-          <div class="col-3">
-            <mat-form-field floatLabel="never" id="endDateToggle">
-              <input matInput [matDatepicker]="endDatepicker" placeholder="Return Date" formControlName='endDate' [(ngModel)]="endDateValue">
-              <mat-datepicker-toggle endDateToggle matSuffix [for]="endDatepicker"></mat-datepicker-toggle>
-              <mat-datepicker #endDatepicker></mat-datepicker>
-            </mat-form-field>
-          </div>
         </div>
       </div>
     </div>

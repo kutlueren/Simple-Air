@@ -1,8 +1,4 @@
 ﻿using AutoMapper;
-using SimpleAir.Bootstrapper;
-using SimpleAir.Domain.Service.Interface;
-using SimpleAir.Domain.Service.Mapping;
-using SimpleAir.Domain.Service.Model.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using SimpleAir.API.Middleware;
+using SimpleAir.Bootstrapper;
+using SimpleAir.Domain.Service.Interface;
+using SimpleAir.Domain.Service.Mapping;
+using SimpleAir.Domain.Service.Model.Mapping;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 

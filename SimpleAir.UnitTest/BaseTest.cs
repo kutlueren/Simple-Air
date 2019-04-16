@@ -78,11 +78,11 @@ namespace SimpleAir.UnitTest
             flights.Add(flight3);
             flights.Add(flight4);
 
-            _flightRepository.Setup(t => t.GetAvailableFligthsAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<DateTime>(), It.IsAny<DateTime>())).Returns<int, int, DateTime, DateTime>(async (int departure, int destination, DateTime startDate, DateTime endDate) =>
+            _flightRepository.Setup(t => t.GetAvailableFligthsAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<DateTime>())).Returns<int, int, DateTime>(async (int departure, int destination, DateTime startDate) =>
             {
                 return await Task.FromResult<ICollection<Flight>>(flights.Where(t => t.Destination.Id == destination
                 && t.Departure.Id == departure
-                && t.Flightdate >= startDate && t.Flightdate <= endDate).ToList());
+                && t.Flightdate >= startDate).ToList());
             });
         }
 

@@ -36,7 +36,7 @@ namespace SimpleAir.UnitTest
 
             _flightService.Setup(t => t.GetAvailableFligthsAsync(It.IsAny<FlightRequestDto>())).Returns<FlightRequestDto>(async (obj) =>
             {
-                var flights = await _flightRepository.Object.GetAvailableFligthsAsync(obj.DepartureId, obj.DestinationId, obj.StartDate, obj.EndDate);
+                var flights = await _flightRepository.Object.GetAvailableFligthsAsync(obj.DepartureId, obj.DestinationId, obj.StartDate);
 
                 List<FlightResponseDto> airportResponse = new List<FlightResponseDto>();
 
@@ -82,7 +82,7 @@ namespace SimpleAir.UnitTest
         {
             var controller = new FlightController(_flightService.Object);
 
-            var response = await controller.GetFlights(new FlightRequestDto() { DepartureId = departure, DestinationId = destination, EndDate = endDate, StartDate = startDate });
+            var response = await controller.GetFlights(new FlightRequestDto() { DepartureId = departure, DestinationId = destination, StartDate = startDate });
 
             var okResult = response as OkObjectResult;
 

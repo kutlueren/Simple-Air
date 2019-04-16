@@ -23,7 +23,6 @@ export class SearchFlightComponent {
   airportsDeparture: Airport[];
 
   startDateValue: Date;
-  endDateValue: Date;
 
 
   constructor(private formBuilder: FormBuilder, private flightService: SearchFlightServiceAbstract) {
@@ -109,8 +108,7 @@ export class SearchFlightComponent {
       flightSearchDto.DepartureId = this.departureValue;
       flightSearchDto.DestinationId = this.destinationValue;
       flightSearchDto.StartDate = new Date(this.startDateValue); 
-      flightSearchDto.EndDate = new Date(this.endDateValue);
- 
+     
       this.flightService.getFlights<Flight[]>(flightSearchDto).subscribe(result => {
 
         if (result.length > 0) {

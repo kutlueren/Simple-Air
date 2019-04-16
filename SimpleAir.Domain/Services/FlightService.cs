@@ -52,7 +52,7 @@ namespace SimpleAir.Domain.Service.Services
 
         public async Task<ICollection<FlightResponseDto>> GetAvailableFligthsAsync(FlightRequestDto request)
         {
-            var flights = await _flightRepository.GetAvailableFligthsAsync(request.DepartureId, request.DestinationId, request.StartDate, request.EndDate);
+            var flights = await _flightRepository.GetAvailableFligthsAsync(request.DepartureId, request.DestinationId, request.StartDate);
 
             List<FlightResponseDto> flightResponseList = new List<FlightResponseDto>();
 

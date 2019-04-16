@@ -61,7 +61,7 @@ namespace SimpleAir.UnitTest
         {
             FlightService flightService = new FlightService(_flightRepository.Object, _applicationDbContext.Object, _airportRepository.Object, _mapper);
 
-            ICollection<FlightResponseDto> flightResponse = await flightService.GetAvailableFligthsAsync(new FlightRequestDto() { DepartureId = departure, DestinationId = destination, EndDate = endDate, StartDate = startDate });
+            ICollection<FlightResponseDto> flightResponse = await flightService.GetAvailableFligthsAsync(new FlightRequestDto() { DepartureId = departure, DestinationId = destination, StartDate = startDate });
 
             flightResponse.Count.Should().Be(flights.Where(t => t.Destination.Id == destination
             && t.Departure.Id == departure

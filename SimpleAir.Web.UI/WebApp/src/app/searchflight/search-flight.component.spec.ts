@@ -105,27 +105,6 @@ describe('SearchFlightComponent', () => {
     expect(component.startDateValue.toLocaleDateString()).toEqual(new Date(input.value).toLocaleDateString());
   }));
 
-  it('should set the selected date to endDateValue', fakeAsync(() => {
-
-    const endDateSelector = fixture.nativeElement.querySelector('#endDateToggle');
-    const toggleButton = endDateSelector.querySelector('mat-datepicker-toggle button')
-
-    toggleButton.click()
-    fixture.detectChanges();
-
-    let cells: NodeListOf<HTMLElement> = document.querySelectorAll('.mat-calendar-body-cell') as NodeListOf<HTMLElement>;
-
-    cells[5].click();
-
-    fixture.detectChanges();
-
-    const input = endDateSelector.querySelector('input')
-
-    flush();
-
-    expect(component.endDateValue.toLocaleDateString()).toEqual(new Date(input.value).toLocaleDateString());
-  }));
-
   it('should set the selected airport id to departureValue', async(() => {
     fixture.detectChanges();
     const departureAirportSelector = fixture.nativeElement.querySelector('#departureAirport');
