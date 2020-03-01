@@ -18,7 +18,7 @@ namespace SimpleAir.Domain.Service.Interface
         Task<ICollection<FlightResponseDto>> GetAvailableFligthsAsync(FlightRequestDto request);
 
         /// <summary>
-        /// Inserts dummy flight data 
+        /// Inserts dummy flight data
         /// </summary>
         /// <returns></returns>
         Task GenerateDummyFlightDataAsync();

@@ -30,11 +30,10 @@ namespace SimpleAir.API.Logging
             _tracker = new PerfTracker(details);
         }
 
-
         public override void OnActionExecuted(ActionExecutedContext context)
         {
             if (_tracker != null)
                 _tracker.Stop(context.HttpContext.Response);
         }
-    }    
+    }
 }

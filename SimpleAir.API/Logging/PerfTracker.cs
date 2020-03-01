@@ -26,6 +26,7 @@ namespace SimpleAir.API.Logging
                 _infoToLog.AdditionalInfo.Add(
                     "Started", beginTime.ToString(CultureInfo.InvariantCulture));
         }
+
         public PerfTracker(string name, string userId, string userName,
                    string location, string product, string layer)
         {

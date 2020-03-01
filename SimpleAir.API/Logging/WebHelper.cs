@@ -11,11 +11,11 @@ namespace SimpleAir.API.Logging
         public static void LogWebUsage(string product, string layer, string activityName,
             HttpContext context, Dictionary<string, object> additionalInfo = null)
         {
-            var details = GetWebLogDetail(product, layer, activityName, context, additionalInfo);            
-            Logger.WriteUsage(details);            
+            var details = GetWebLogDetail(product, layer, activityName, context, additionalInfo);
+            Logger.WriteUsage(details);
         }
 
-        public static void LogWebError(string product, string layer, Exception ex, 
+        public static void LogWebError(string product, string layer, Exception ex,
             HttpContext context)
         {
             var details = GetWebLogDetail(product, layer, null, context, null);
@@ -24,8 +24,8 @@ namespace SimpleAir.API.Logging
             Logger.WriteError(details);
         }
 
-        public static LogDetail GetWebLogDetail(string product, string layer, 
-            string activityName, HttpContext context, 
+        public static LogDetail GetWebLogDetail(string product, string layer,
+            string activityName, HttpContext context,
             Dictionary<string, object> additionalInfo = null)
         {
             var detail = new LogDetail
@@ -50,10 +50,10 @@ namespace SimpleAir.API.Logging
             if (request != null)
             {
                 detail.Location = request.Path;
-                                      
+
                 detail.AdditionalInfo.Add("UserAgent", request.Headers["User-Agent"]);
                 // non en-US preferences here??
-                detail.AdditionalInfo.Add("Languages", request.Headers["Accept-Language"]);  
+                detail.AdditionalInfo.Add("Languages", request.Headers["Accept-Language"]);
 
                 var qdict = Microsoft.AspNetCore.WebUtilities
                     .QueryHelpers.ParseQuery(request.QueryString.ToString());
@@ -61,14 +61,13 @@ namespace SimpleAir.API.Logging
                 {
                     detail.AdditionalInfo.Add($"QueryString-{key}", qdict[key]);
                 }
-                
             }
-        }        
+        }
 
         private static void GetUserData(LogDetail detail, HttpContext context)
         {
             var userId = "";
-            var userName = "";            
+            var userName = "";
             var user = context.User;  // ClaimsPrincipal.Current is not sufficient
             if (user != null)
             {
@@ -80,7 +79,7 @@ namespace SimpleAir.API.Logging
                     else if (claim.Type == "name")
                         userName = claim.Value;
                     else
-                        // example dictionary key: UserClaim-4-role 
+                        // example dictionary key: UserClaim-4-role
                         detail.AdditionalInfo.Add($"UserClaim-{i++}-{claim.Type}", claim.Value);
                 }
             }

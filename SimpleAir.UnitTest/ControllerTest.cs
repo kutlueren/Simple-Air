@@ -1,14 +1,13 @@
 ﻿using FluentAssertions;
+using Microsoft.AspNetCore.Mvc;
+using Moq;
+using SimpleAir.API.Controllers;
 using SimpleAir.Domain.Service.Interface;
 using SimpleAir.Domain.Service.Model.Airport;
 using SimpleAir.Domain.Service.Model.Flight;
-using SimpleAir.API.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -20,7 +19,6 @@ namespace SimpleAir.UnitTest
 
         public ControllerTest() : base()
         {
-
             _flightService = new Mock<IFlightService>();
 
             _flightService.Setup(t => t.GetAirportsAsync(It.IsAny<AirportRequestDto>())).Returns<AirportRequestDto>(async (obj) =>

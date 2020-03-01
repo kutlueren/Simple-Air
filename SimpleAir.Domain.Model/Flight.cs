@@ -16,6 +16,7 @@ namespace SimpleAir.Domain.Model
         /// Fligth Fare to be charged
         /// </summary>
         public decimal Fare { get; set; }
+
         /// <summary>
         /// Fare Currency
         /// </summary>

@@ -1,6 +1,6 @@
-﻿using SimpleAir.Domain.Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SimpleAir.Domain.Model;
 
 namespace SimpleAir.Domain.Repository.Builder
 {

@@ -50,7 +50,9 @@ namespace SimpleAir.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            Mapper.Initialize(cfg => { cfg.AddProfile<FlightProfile>();
+            Mapper.Initialize(cfg =>
+            {
+                cfg.AddProfile<FlightProfile>();
                 cfg.AddProfile<AirportProfile>();
             });
 
@@ -74,7 +76,6 @@ namespace SimpleAir.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Linkit Air Api", Version = "v1" });
-
             });
         }
 

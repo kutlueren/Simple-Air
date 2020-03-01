@@ -8,10 +8,12 @@ namespace SimpleAir.Domain.Service.Model.Flight
         /// Departure airport id
         /// </summary>
         public int DepartureId { get; set; }
+
         /// <summary>
         /// Destination airport id
         /// </summary>
         public int DestinationId { get; set; }
+
         /// <summary>
         /// Flight date
         /// </summary>

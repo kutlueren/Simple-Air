@@ -1,5 +1,3 @@
-using System;
-
 namespace SimpleAir.API.Models
 {
     public class ErrorViewModel

@@ -1,6 +1,5 @@
 <h1>Simple Air Flight Search</h1>
 
-
 <form class="example-form" [formGroup]='usersForm'>
 
   <div class="form-group">
@@ -9,7 +8,7 @@
         <div class="row">
           <div class="col-3">
             <mat-form-field floatLabel="never" id="departureAirport">
-              <input  matInput placeholder="Type Departure" [matAutocomplete]="autoDeparture" formControlName='departure'>
+              <input matInput placeholder="Type Departure" [matAutocomplete]="autoDeparture" formControlName='departure'>
               <mat-autocomplete #autoDeparture="matAutocomplete" [displayWith]="displayDeparture" (optionSelected)='onDepartureSelected($event.option.value)'>
                 <div id="optionDiv">
                   <mat-option *ngFor="let airport of airportsDeparture" [value]="airport">
@@ -18,14 +17,12 @@
                   </mat-option>
                 </div>
               </mat-autocomplete>
-
             </mat-form-field>
           </div>
 
-
           <div class="col-3">
             <mat-form-field floatLabel="never" id="destinationAirport">
-              <input matInput placeholder="Type Destination" [matAutocomplete]="autoDestination" formControlName='destination' >
+              <input matInput placeholder="Type Destination" [matAutocomplete]="autoDestination" formControlName='destination'>
             </mat-form-field>
 
             <mat-autocomplete #autoDestination="matAutocomplete" [displayWith]="displayDestination" (optionSelected)='onDestinationSelected($event.option.value)'>
@@ -34,9 +31,7 @@
                 <span>{{ airport.name }}</span>
                 <small> ({{airport.code}})</small>
               </mat-option>
-
             </mat-autocomplete>
-
           </div>
         </div>
       </div>
@@ -49,7 +44,7 @@
           <div class="col-3">
             <mat-form-field floatLabel="never" id='startDateToggle'>
               <input matInput [matDatepicker]="startDatepicker" placeholder="Departure Date" formControlName='startDate' [(ngModel)]="startDateValue">
-              <mat-datepicker-toggle  matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
+              <mat-datepicker-toggle matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
               <mat-datepicker #startDatepicker></mat-datepicker>
             </mat-form-field>
           </div>
@@ -58,9 +53,7 @@
     </div>
   </div>
 
-
-  <h3><button  type="button" class="btn btn-primary" (click)="submit()">Search Flights</button></h3>
-
+  <h3><button type="button" class="btn btn-primary" (click)="submit()">Search Flights</button></h3>
 </form>
 <br />
 <table class='table table-striped' *ngIf="fligths">

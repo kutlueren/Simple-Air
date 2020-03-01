@@ -1,8 +1,8 @@
-﻿using SimpleAir.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using SimpleAir.Core;
 using SimpleAir.Core.Repository;
 using SimpleAir.Domain.Model;
 using SimpleAir.Domain.Repository.Context;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

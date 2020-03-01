@@ -4,7 +4,6 @@ using SimpleAir.Domain.Service.Model.Airport;
 using SimpleAir.Domain.Service.Model.Flight;
 using SimpleAir.Domain.Service.Services;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -1,15 +1,14 @@
 ﻿using AutoMapper;
+using Moq;
 using SimpleAir.Core;
 using SimpleAir.Core.Repository;
 using SimpleAir.Domain.Model;
 using SimpleAir.Domain.Service.Mapping;
 using SimpleAir.Domain.Service.Model.Mapping;
-using Moq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SimpleAir.UnitTest

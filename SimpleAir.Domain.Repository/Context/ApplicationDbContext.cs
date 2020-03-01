@@ -1,6 +1,6 @@
-﻿using SimpleAir.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using SimpleAir.Core;
 using SimpleAir.Domain.Model;
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using System.Threading.Tasks;
 

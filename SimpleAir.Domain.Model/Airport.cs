@@ -9,6 +9,7 @@
         /// Airport Id
         /// </summary>
         public int Id { get; set; }
+
         /// <summary>
         /// Airport Name
         /// </summary>

@@ -40,7 +40,6 @@ describe('SearchFlightComponent', () => {
   });
 
   it('should return departure airport name accordingly', async(() => {
-
     let airport = new MockAirport();
     airport.name = 'Amsterdam';
     airport.code = 'SCHPL';
@@ -50,9 +49,7 @@ describe('SearchFlightComponent', () => {
     expect(displayValue).toEqual(airport.name + " (" + airport.code + ")");
   }));
 
-
   it('should return destination airport name accordingly', async(() => {
-
     let airport = new MockAirport();
     airport.name = 'Amsterdam';
     airport.code = 'SCHPL';
@@ -62,9 +59,7 @@ describe('SearchFlightComponent', () => {
     expect(displayValue).toEqual(airport.name + " (" + airport.code + ")");
   }));
 
-
   it('should set departure value to selected value on departure selected', async(() => {
-
     let airport = new MockAirport();
     airport.id = 1;
     component.onDepartureSelected(airport);
@@ -74,7 +69,6 @@ describe('SearchFlightComponent', () => {
   }));
 
   it('should set destination value to selected value on departure selected', async(() => {
-
     let airport = new MockAirport();
     airport.id = 1;
     component.onDestinationSelected(airport);
@@ -84,7 +78,6 @@ describe('SearchFlightComponent', () => {
   }));
 
   it('should set the selected date to startDateValue', fakeAsync(() => {
-
     const startDateSelector = fixture.nativeElement.querySelector('#startDateToggle');
     const toggleButton = startDateSelector.querySelector('mat-datepicker-toggle button')
 
@@ -96,7 +89,6 @@ describe('SearchFlightComponent', () => {
     cells[1].click();
 
     fixture.detectChanges();
-
 
     flush();
 
@@ -115,15 +107,11 @@ describe('SearchFlightComponent', () => {
     input.value = 'a';
     input.dispatchEvent(new Event('input'));
 
-
     fixture.detectChanges();
 
-
     fixture.whenStable().then(() => {
-
       fixture.detectChanges();
       fixture.whenStable().then(() => {
-
         fixture.detectChanges();
 
         let options: NodeListOf<HTMLElement> = document.querySelectorAll('mat-option') as NodeListOf<HTMLElement>;
@@ -136,9 +124,7 @@ describe('SearchFlightComponent', () => {
 
         expect(component.departureValue).toEqual(values.airports[0].id);
       });
-
     });
-
   }));
 
   it('should set the selected airport id to destinationValue', async(() => {
@@ -151,15 +137,11 @@ describe('SearchFlightComponent', () => {
     input.value = 'a';
     input.dispatchEvent(new Event('input'));
 
-
     fixture.detectChanges();
 
-
     fixture.whenStable().then(() => {
-
       fixture.detectChanges();
       fixture.whenStable().then(() => {
-
         fixture.detectChanges();
 
         let options: NodeListOf<HTMLElement> = document.querySelectorAll('mat-option') as NodeListOf<HTMLElement>;
@@ -172,12 +154,8 @@ describe('SearchFlightComponent', () => {
 
         expect(component.destinationValue).toEqual(values.airports[1].id);
       });
-
     });
-
   }));
-
-
 });
 
 export class Values {
@@ -188,11 +166,9 @@ export class Values {
 }
 
 export class MockFlightService extends SearchFlightServiceAbstract {
-
   values: Values = new Values();
 
   getAirPorts<T>(model: any): Observable<T> {
-
     let result = Observable.create((observer: Subscriber<MockAirport[]>) => {
       observer.next(this.values.airports);
       observer.complete();
@@ -204,7 +180,6 @@ export class MockFlightService extends SearchFlightServiceAbstract {
   getFlights<T>(model: any): Observable<T> {
     throw new Error("Method not implemented.");
   }
-
 }
 
 class MockAirport implements Airport {

@@ -1,8 +1,8 @@
-﻿using SimpleAir.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using SimpleAir.Core;
 using SimpleAir.Core.Repository;
 using SimpleAir.Domain.Model;
 using SimpleAir.Domain.Repository.Context;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +29,9 @@ namespace SimpleAir.Domain.Repository.Repository
 
         public async Task<IEnumerable<Flight>> GetAvailableFligthsAsync(int departure, int destination, DateTime startDate)
         {
-            var flights = await _dbContext.Flights.Include(u => u.Destination).Include(u => u.Departure).Where(t => t.Destination.Id == destination 
+            var flights = await _dbContext.Flights.Include(u => u.Destination).Include(u => u.Departure).Where(t => t.Destination.Id == destination
             && t.Departure.Id == departure
-            && t.Flightdate>=startDate).ToListAsync();
+            && t.Flightdate >= startDate).ToListAsync();
 
             return flights;
         }

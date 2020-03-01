@@ -1,8 +1,8 @@
-﻿using SimpleAir.Domain.Service.Interface;
+﻿using Microsoft.AspNetCore.Mvc;
+using SimpleAir.API.Logging;
+using SimpleAir.Domain.Service.Interface;
 using SimpleAir.Domain.Service.Model.Airport;
 using SimpleAir.Domain.Service.Model.Flight;
-using Microsoft.AspNetCore.Mvc;
-using SimpleAir.API.Logging;
 using System;
 using System.Threading.Tasks;
 
